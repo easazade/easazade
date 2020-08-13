@@ -6,4 +6,4 @@
 - 😎 I've worked with Java, Kotlin, Dart and Played with PHP, Python etc.
 - 💻 I love freelancing and creating beautiful Apps.
 - 📭 Contact me at : 
-      [*WhatsApp*](https://wa.me/989117158746) or Email me at *easazade@gmail.com*
+      [*WhatsApp*](https://wa.me/989117158746) or email me at *easazade@gmail.com*
