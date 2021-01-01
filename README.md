@@ -6,4 +6,4 @@
 - 😎 I've worked with Java, Kotlin, Dart and Played with PHP, Python etc.
 - 💻 I love freelancing and creating beautiful Apps.
 - ✌  you can also find me at [*linked.in*](https://www.linkedin.com/in/easazade/) or [*stackoverflow*](https://stackoverflow.com/users/6748763/easazade)
-<!-- - 📭 Contact me at : [*WhatsApp*](https://wa.me/989117158746) or email me at *easazade@gmail.com* -->
+- 📭 Contact me at : [*WhatsApp*](https://wa.me/989117158746) or email me at *easazade@gmail.com*
