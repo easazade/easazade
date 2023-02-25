@@ -9,7 +9,6 @@
 .history
 .svn/
 migrate_working_dir/
-
 # IntelliJ related
 *.iml
 *.ipr
@@ -49,3 +48,5 @@ app.*.map.json
 
 **.g.dart
 **.freezed.dart
+
+logs/
