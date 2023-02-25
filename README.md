@@ -75,7 +75,7 @@
 - ❤️‍🔥 I'm passionate about creating tools and libraries that make the development process easier/faster while also achieving a maintainable, testable, reliable result.
 - 😎 I've worked with Java, Kotlin, Dart and Played with PHP, Python, JavaScript.
 - ✌ Right now I'm trying to learn JavaScript.
-- 💻 besides creating tools, I love creating beautiful Apps. if you have an application project with GREAT ui design contact me.
+- 💻 besides creating tools, I love creating beautiful Apps. If you have an application project with GREAT👌 or Challenging ui design contact me.
 - 📭 You can email me at *easazade@gmail.com*. <small>( I might be slow to answer )</small>
 <!-- - 📭 Contact me at : [*WhatsApp*](https://wa.me/989117158746) or email me at *easazade@gmail.com* -->
 <a href="https://github.com/easazade">
