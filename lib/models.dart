@@ -82,7 +82,7 @@ class GithubRepository with _$GithubRepository {
     required int open_issues,
     required int watchers,
     required String default_branch,
-    Map<String,dynamic>? license,
+    Map<String, dynamic>? license,
     String? homepage,
     String? mirror_url,
     @Default([]) List topics,

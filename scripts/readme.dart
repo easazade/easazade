@@ -17,7 +17,7 @@ Future createReadMeTable() async {
 
   for (var repo in repos) {
     final name = repo.name;
-    final languageIcon = '<img src="icons/java.svg" width="40" height="40">';
+
     final stars =
         '<img alt="Github Stars" src="https://img.shields.io/github/stars/$githubId/$name?style=$badgeStyle">';
     final url = '<a href="${repo.html_url}">View Page</a>';
@@ -25,12 +25,22 @@ Future createReadMeTable() async {
     final popularity = '<img alt="Pub Popularity" src="https://img.shields.io/pub/popularity/$name?style=$badgeStyle">';
     final version = '<img alt="Pub Version" src="https://img.shields.io/pub/v/$name?style=$badgeStyle">';
 
-    table.writeln('| $languageIcon | $name | $stars | $url | $publikes | $popularity | $version |');
+    table.writeln('| ${getLanguageIcon(repo.language)} | $name | $stars | $url | $publikes | $popularity | $version |');
   }
 
+  // placing table into readme template and writing README.md file
   final file = File('templates/readme.md');
   var readme = await file.readAsString();
   readme = readme.replaceAll('{{repos_table}}', table.toString());
 
   await writeFile(content: readme.toString(), path: 'README.md');
+}
+
+String getLanguageIcon(String? language) {
+  final languageIconPath = (language != null) ? getLanguageIconPath(language) : null;
+  if (languageIconPath != null) {
+    return '<img src="$languageIconPath" width="20" height="20">';
+  } else {
+    return '🤷';
+  }
 }

@@ -43,3 +43,13 @@ extension StringExt on String {
   bool get isBlank => trim().isEmpty;
   bool get isNotBlank => !isBlank;
 }
+
+String? getLanguageIconPath(String language) {
+  language = language.toLowerCase();
+  final iconFile = File('icons/$language.svg');
+  if (iconFile.existsSync()) {
+    return iconFile.path;
+  }
+
+  return null;
+}
