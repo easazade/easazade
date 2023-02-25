@@ -76,9 +76,8 @@
 - 😎 I've worked with Java, Kotlin, Dart and Played with PHP, Python, JavaScript.
 - ✌ Right now I'm trying to learn JavaScript.
 - 💻 besides creating tools, I love creating beautiful Apps. if you have an application project with great design contact me.
-- ✌  you can also find me at [*linked.in*](https://www.linkedin.com/in/easazade/) or [*stackoverflow*](https://stackoverflow.com/users/6748763/easazade)
-- 📭 email me at *easazade@gmail.com*
+- 📭 You can email me at *easazade@gmail.com*. <small>( I might be slow to answer )</small>
 <!-- - 📭 Contact me at : [*WhatsApp*](https://wa.me/989117158746) or email me at *easazade@gmail.com* -->
 <a href="https://github.com/easazade">
-<img src="https://readme.app.surmon.me/api/render?template_id=github-top-languages&props.username=easazade&props.theme=light&props.background=white&props.count=12&props.columns=4&props.rowGap=22&props.columnGap=80&props.legendSize=6&svg.width=846&svg.height=176">
+<img src="https://readme.app.surmon.me/api/render?template_id=github-top-languages&props.username=easazade&props.theme=light&props.background=transparent&props.count=12&props.columns=4&props.rowGap=22&props.columnGap=80&props.legendSize=6&svg.width=846&svg.height=176">
 </a>
