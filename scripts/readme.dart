@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'consts.dart';
-import 'fetchers.dart';
-import 'utils.dart';
+import 'utils/consts.dart';
+import 'utils/fetchers.dart';
+import 'utils/utils.dart';
 
 Future createReadMeTable() async {
   var repos = await fetchGithubRepositories();
@@ -11,12 +11,13 @@ Future createReadMeTable() async {
   final badgeStyle = 'flat-square'; // flat, flat-square, for-the-badge
 
   final table = StringBuffer('''
-| Name | Stars | Home | Likes | popularity | Version |
-| ---- | ----- | ---- | ----- | ---------- | ------- |
+|     | Name | Stars | Home | Likes | popularity | Version |
+| --- | ---- | ----- | ---- | ----- | ---------- | ------- |
 ''');
 
   for (var repo in repos) {
     final name = repo.name;
+    final languageIcon = '<img src="icons/java.svg" width="40" height="40">';
     final stars =
         '<img alt="Github Stars" src="https://img.shields.io/github/stars/$githubId/$name?style=$badgeStyle">';
     final url = '<a href="${repo.html_url}">View Page</a>';
@@ -24,7 +25,7 @@ Future createReadMeTable() async {
     final popularity = '<img alt="Pub Popularity" src="https://img.shields.io/pub/popularity/$name?style=$badgeStyle">';
     final version = '<img alt="Pub Version" src="https://img.shields.io/pub/v/$name?style=$badgeStyle">';
 
-    table.writeln('| $name | $stars | $url | $publikes | $popularity | $version |');
+    table.writeln('| $languageIcon | $name | $stars | $url | $publikes | $popularity | $version |');
   }
 
   final file = File('templates/readme.md');
