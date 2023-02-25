@@ -1,15 +1,19 @@
 import 'dart:convert';
 
+import 'package:now/models.dart';
+
 import 'consts.dart';
 import 'network.dart';
 import 'utils.dart';
 
-Future<List> fetchGithubRepositories() async {
+Future<List<GithubRepository>> fetchGithubRepositories() async {
   final url = 'https://api.github.com/users/$githubId/repos?per_page=1000';
   final result = await dio.get(url);
 
   logAsFile(content: jsonEncode(result.data), fileName: 'github_repos.json');
-  return result.data;
+
+  final repos = (result.data as List).map((json) => GithubRepository.fromJson(json)).toList();
+  return repos;
 }
 
 Future<Map<String, dynamic>> fetchGithubUserInfo() async {
