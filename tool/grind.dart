@@ -7,9 +7,8 @@ main(args) => grind(args);
 // @Task()
 // test() => new TestRunner().testAsync();
 
-@Task()
-@DefaultTask()
-readme() => createReadMeTable();
+@DefaultTask('Generates README.md file')
+readme() => createReadMe();
 
 @Task()
 clean() => defaultClean();

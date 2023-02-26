@@ -12,6 +12,7 @@ class GithubRepository with _$GithubRepository {
     required String node_id,
     required String name,
     required String full_name,
+    required GithubAccount owner,
     required bool private,
     required bool fork,
     required String html_url,
@@ -89,4 +90,36 @@ class GithubRepository with _$GithubRepository {
   }) = _GithubRepository;
 
   factory GithubRepository.fromJson(Map<String, Object?> json) => _$GithubRepositoryFromJson(json);
+}
+
+@freezed
+class GithubAccount with _$GithubAccount {
+  const factory GithubAccount({
+    required int id,
+    required bool site_admin,
+    required String login,
+    required String node_id,
+    required String avatar_url,
+    required String gravatar_id,
+    required String url,
+    required String html_url,
+    required String followers_url,
+    required String following_url,
+    required String gists_url,
+    required String starred_url,
+    required String subscriptions_url,
+    required String organizations_url,
+    required String repos_url,
+    required String events_url,
+    required String received_events_url,
+    required String type,
+    int? contributions,
+  }) = _GithubAccount;
+
+  factory GithubAccount.fromJson(Map<String, Object?> json) => _$GithubAccountFromJson(json);
+}
+
+extension GithubAccountExt on GithubAccount {
+  bool get isOrg => type == 'Organization';
+  bool get isUser => type == 'User';
 }

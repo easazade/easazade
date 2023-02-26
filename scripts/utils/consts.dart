@@ -1,1 +1,2 @@
-const githubId = 'easazade';
+const userGithubId = 'easazade';
+const orgs = ['rekabhq'];

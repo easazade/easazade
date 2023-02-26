@@ -1,31 +1,38 @@
 import 'dart:io';
 
-import 'utils/consts.dart';
+import 'package:collection/collection.dart';
+
 import 'utils/fetchers.dart';
 import 'utils/utils.dart';
 
-Future createReadMeTable() async {
-  var repos = await fetchGithubRepositories();
-  repos = repos.where((repo) => repo.stargazers_count > 1).toList();
+Future createReadMe() async {
+  var repos = await fetchAllReposUserListedAsContributor();
+  repos = repos
+      .where((repo) => repo.stargazers_count > 1)
+      .toList()
+      .sorted((a, b) => b.stargazers_count.compareTo(a.stargazers_count));
 
   final badgeStyle = 'flat-square'; // flat, flat-square, for-the-badge
 
   final table = StringBuffer('''
-|     | Name | Stars | Home | Likes | popularity | Version |
-| --- | ---- | ----- | ---- | ----- | ---------- | ------- |
+|     | Name | Stars | Home | Pub Likes | popularity | 👑 | Version |
+| --- | ---- | ----- | ---- | --------- | ---------- | -  | ------- |
 ''');
 
   for (var repo in repos) {
     final name = repo.name;
 
     final stars =
-        '<img alt="Github Stars" src="https://img.shields.io/github/stars/$githubId/$name?style=$badgeStyle">';
+        '<img alt="Github Stars" src="https://img.shields.io/github/stars/${repo.owner.login}/$name?style=$badgeStyle">';
     final url = '<a href="${repo.html_url}">View Page</a>';
     final publikes = '<img alt="Pub Likes" src="https://img.shields.io/pub/likes/$name?style=$badgeStyle">';
     final popularity = '<img alt="Pub Popularity" src="https://img.shields.io/pub/popularity/$name?style=$badgeStyle">';
+    final ownerIcon =
+        '<img alt="${repo.owner.login}" src="${repo.owner.avatar_url}" width="24" height="24" style="border-radius:50%">';
     final version = '<img alt="Pub Version" src="https://img.shields.io/pub/v/$name?style=$badgeStyle">';
 
-    table.writeln('| ${getLanguageIcon(repo.language)} | $name | $stars | $url | $publikes | $popularity | $version |');
+    table.writeln(
+        '| ${getLanguageIcon(repo.language)} | $name | $stars | $url | $publikes | $popularity | $ownerIcon | $version |');
   }
 
   // placing table into readme template and writing README.md file
