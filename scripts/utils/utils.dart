@@ -53,3 +53,13 @@ String? getLanguageIconPath(String language) {
 
   return null;
 }
+
+
+String getLanguageIcon(String? language) {
+  final languageIconPath = (language != null) ? getLanguageIconPath(language) : null;
+  if (languageIconPath != null) {
+    return '<img src="$languageIconPath" width="20" height="20">';
+  } else {
+    return '🤷';
+  }
+}
