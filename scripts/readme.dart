@@ -15,8 +15,8 @@ Future createReadMe() async {
   final badgeStyle = 'flat-square'; // flat, flat-square, for-the-badge
 
   final table = StringBuffer('''
-|     | Github Page | Stars |  Home  | Pub Likes | popularity | 👑 | Version |
-| --- | ----------- | ----- | :----: | --------- | ---------- | -  | ------- |
+|     | Github Page | Stars |  Home  | Pub Likes | popularity | Contributors | 👑 | Version |
+| --- | ----------- | ----- | :----: | --------- | ---------- | ------------ | -  | ------- |
 ''');
 
   for (var repo in repos) {
@@ -33,8 +33,11 @@ Future createReadMe() async {
         '<img alt="${repo.owner.login}" src="${repo.owner.avatar_url}" width="24" height="24" style="border-radius:50%">';
     final version = '<img alt="Pub Version" src="https://img.shields.io/pub/v/${repo.name}?style=$badgeStyle">';
 
+    final contributors =
+        '<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/${repo.owner.login}/${repo.name}?style=$badgeStyle">';
+
     table.writeln(
-        '| ${getLanguageIcon(repo.language)} | $githubPage | $stars | $homepage | $publikes | $popularity | $ownerIcon | $version |');
+        '| ${getLanguageIcon(repo.language)} | $githubPage | $stars | $homepage | $publikes | $popularity | $contributors | $ownerIcon | $version |');
   }
 
   // placing table into readme template and writing README.md file
