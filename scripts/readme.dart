@@ -15,8 +15,8 @@ Future createReadMe() async {
   final badgeStyle = 'flat-square'; // flat, flat-square, for-the-badge
 
   final table = StringBuffer('''
-|     | Github Page | Stars |  Home  | Pub Likes | popularity | Contributors | 👑 | Version |
-| --- | ----------- | ----- | :----: | --------- | ---------- | ------------ | -  | ------- |
+|     | Github Page | Stars | Pub Likes | popularity | Contributors | 👑 | Version |
+| --- | ----------- | ----- | --------- | ---------- | ------------ | -  | ------- |
 ''');
 
   for (var repo in repos) {
@@ -25,7 +25,7 @@ Future createReadMe() async {
     final stars =
         '<img alt="Github Stars" src="https://img.shields.io/github/stars/${repo.owner.login}/${repo.name}?style=$badgeStyle">';
 
-    final homepage = (repo.homepage?.isNotBlank == true) ? '<a href="${repo.homepage}">homepage</a>' : '-';
+    // final homepage = (repo.homepage?.isNotBlank == true) ? '<a href="${repo.homepage}">homepage</a>' : '-';
     final publikes = '<img alt="Pub Likes" src="https://img.shields.io/pub/likes/${repo.name}?style=$badgeStyle">';
     final popularity =
         '<img alt="Pub Popularity" src="https://img.shields.io/pub/popularity/${repo.name}?style=$badgeStyle">';
@@ -37,7 +37,7 @@ Future createReadMe() async {
         '<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/${repo.owner.login}/${repo.name}?style=$badgeStyle">';
 
     table.writeln(
-        '| ${getLanguageIcon(repo.language)} | $githubPage | $stars | $homepage | $publikes | $popularity | $contributors | $ownerIcon | $version |');
+        '| ${getLanguageIcon(repo.language)} | $githubPage | $stars | $publikes | $popularity | $contributors | $ownerIcon | $version |');
   }
 
   // placing table into readme template and writing README.md file
