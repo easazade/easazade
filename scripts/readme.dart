@@ -34,7 +34,7 @@ Future createReadMe() async {
     final version = '<img alt="Pub Version" src="https://img.shields.io/pub/v/${repo.name}?style=$badgeStyle">';
 
     final contributors =
-        '<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/${repo.owner.login}/${repo.name}?style=$badgeStyle">';
+        '<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/${repo.owner.login}/${repo.name}?color=45cc11&style=$badgeStyle">';
 
     table.writeln(
         '| ${getLanguageIcon(repo.language)} | $githubPage | $stars | $publikes | $popularity | $contributors | $ownerIcon | $version |');
