@@ -42,12 +42,12 @@
     height="22px"
     src="https://img.shields.io/badge/IG-d83262?style=for-the-badge&logo=instagram&logoColor=white&logoWidth=16"
   /></a>
-  <!-- <span>&nbsp;</span>
+  <span>&nbsp;</span>
   <a href="https://twitter.com/easazade"><img
     alt="twitter"
     height="22px"
     src="https://img.shields.io/badge/TW-1b95e0?style=for-the-badge&logo=twitter&logoColor=white&logoWidth=16"
-  /></a> -->
+  /></a>
   <!-- <span>&nbsp;</span> -->
   <!-- <a href="https://www.youtube.com/@easazade"><img
     alt="youtube"
