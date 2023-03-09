@@ -49,7 +49,7 @@
     src="https://img.shields.io/badge/TW-1b95e0?style=for-the-badge&logo=twitter&logoColor=white&logoWidth=16"
   /></a>
   <span>&nbsp;</span>
-  <a href="https://www.youtube.com/@easazade"><img
+  <a href="https://www.youtube.com/@easazade" target="_blank"><img
     alt="youtube"
     height="22px"
     src="https://img.shields.io/badge/YT-ec3323?style=for-the-badge&logo=youtube&logoColor=white&logoWidth=16"
