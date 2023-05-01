@@ -78,9 +78,9 @@
 - 💻 besides creating tools, I love creating beautiful Apps. If you have an application project with GREAT👌 or Challenging ui design contact me.
 - 📭 You can email me at *easazade@gmail.com*. <small>( I might be slow to answer )</small>
 <!-- - 📭 Contact me at : [*WhatsApp*](https://wa.me/989117158746) or email me at *easazade@gmail.com* -->
-<a href="https://github.com/easazade">
+<!-- <a href="https://github.com/easazade">
 <img src="https://readme.app.surmon.me/api/render?template_id=github-top-languages&props.username=easazade&props.theme=light&props.background=white&props.count=12&props.columns=4&props.rowGap=22&props.columnGap=80&props.legendSize=6&svg.width=846&svg.height=176">
-</a>
+</a> -->
 
 <br>
 <h4></h4>
