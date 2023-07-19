@@ -1,6 +1,7 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:easazade/language_colors.dart';
 
 part 'models.freezed.dart';
 part 'models.g.dart';
@@ -119,7 +120,11 @@ class GithubAccount with _$GithubAccount {
   factory GithubAccount.fromJson(Map<String, Object?> json) => _$GithubAccountFromJson(json);
 }
 
-extension GithubAccountExt on GithubAccount {
+extension GithubAccountX on GithubAccount {
   bool get isOrg => type == 'Organization';
   bool get isUser => type == 'User';
+}
+
+extension GithubRepositoryX on GithubRepository {
+  String get languageColor => languageColors[language]?['color'] ?? '#000000';
 }

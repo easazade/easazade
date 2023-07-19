@@ -1,4 +1,4 @@
-name: now
+name: easazade
 description: A new Flutter project.
 
 publish_to: 'none'
@@ -9,6 +9,10 @@ environment:
   sdk: ">=2.18.0 <3.0.0"
 
 dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   freezed_annotation: ^2.2.0
   json_annotation: ^4.8.0
   dio: ^5.0.1
@@ -17,10 +21,12 @@ dependencies:
   collection: ^1.16.0
 
 dev_dependencies:
+  flutter_test:
+    sdk: flutter
   freezed: ^2.3.2
   build_runner: ^2.3.3
   json_serializable: ^6.6.1
   grinder: ^0.9.3
-  test: ^1.23.1
 
-
+flutter:
+  uses-material-design: true

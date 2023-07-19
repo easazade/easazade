@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:now/models.dart';
+import 'package:easazade/models.dart';
 
 import 'consts.dart';
 import 'network.dart';
