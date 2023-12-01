@@ -8,7 +8,7 @@ import 'utils/utils.dart';
 Future createReadMe() async {
   var repos = await fetchAllReposUserListedAsContributor();
   repos = repos
-      .where((repo) => repo.stargazers_count > 1)
+      .where((repo) => repo.stargazers_count > 1 || repo.name == 'crystalline')
       .toList()
       .sorted((a, b) => b.stargazers_count.compareTo(a.stargazers_count));
 
