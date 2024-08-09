@@ -74,8 +74,7 @@
 - 📱 I’m a Mobile Developer experienced in Flutter and Native Android
 - ❤️‍🔥 I'm passionate about creating tools and libraries that make the development process easier/faster while also achieving a maintainable, testable, reliable result.
 - 😎 I've worked with Java, Kotlin, Dart and Played with PHP, Python, JavaScript.
-- ✌ Right now I'm interested in contributing to open source projects that improve dart's place in other areas of programming like web (backend/frontend). So I'm Contributing to [jaspr](https://github.com/schultek/jaspr/) and [dart_frog](https://github.com/VeryGoodOpenSource/dart_frog/). 
-- 💻 besides creating tools, I love creating beautiful Apps. If you have an application project with GREAT👌 or Challenging ui design contact me.
+- 💻 besides creating tools, I love creating beautiful Apps. If you have an application project with GREAT👌 or Challenging UI design contact me.
 - 📭 You can email me at *easazade@gmail.com*. <small>( I might be slow to answer )</small>
 <!-- - 📭 Contact me at : [*WhatsApp*](https://wa.me/989117158746) or email me at *easazade@gmail.com* -->
 <!-- <a href="https://github.com/easazade">

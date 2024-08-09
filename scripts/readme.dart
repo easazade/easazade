@@ -8,7 +8,12 @@ import 'utils/utils.dart';
 Future createReadMe() async {
   var repos = await fetchAllReposUserListedAsContributor();
   repos = repos
-      .where((repo) => repo.stargazers_count > 1 || repo.name == 'crystalline')
+      .where(
+        (repo) =>
+            repo.stargazers_count > 1 ||
+            repo.name == 'crystalline' ||
+            repo.name == 'weaver',
+      )
       .toList()
       .sorted((a, b) => b.stargazers_count.compareTo(a.stargazers_count));
 
@@ -26,12 +31,14 @@ Future createReadMe() async {
         '<img alt="Github Stars" src="https://img.shields.io/github/stars/${repo.owner.login}/${repo.name}?style=$badgeStyle">';
 
     // final homepage = (repo.homepage?.isNotBlank == true) ? '<a href="${repo.homepage}">homepage</a>' : '-';
-    final publikes = '<img alt="Pub Likes" src="https://img.shields.io/pub/likes/${repo.name}?style=$badgeStyle">';
+    final publikes =
+        '<img alt="Pub Likes" src="https://img.shields.io/pub/likes/${repo.name}?style=$badgeStyle">';
     final popularity =
         '<img alt="Pub Popularity" src="https://img.shields.io/pub/popularity/${repo.name}?style=$badgeStyle">';
     final ownerIcon =
         '<img alt="${repo.owner.login}" src="${repo.owner.avatar_url}" width="24" height="24" style="border-radius:50%">';
-    final version = '<img alt="Pub Version" src="https://img.shields.io/pub/v/${repo.name}?style=$badgeStyle">';
+    final version =
+        '<img alt="Pub Version" src="https://img.shields.io/pub/v/${repo.name}?style=$badgeStyle">';
 
     final contributors =
         '<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/${repo.owner.login}/${repo.name}?color=45cc11&style=$badgeStyle">';
