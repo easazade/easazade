@@ -20,7 +20,7 @@ Future createReadMe() async {
   final badgeStyle = 'flat-square'; // flat, flat-square, for-the-badge
 
   final table = StringBuffer('''
-|     | Github Page | Stars | Pub Likes | popularity | Contributors | 👑 | Version |
+|     | Github Page | Stars | Pub Likes | Downloads | Contributors | 👑 | Version |
 | --- | ----------- | ----- | --------- | ---------- | ------------ | -  | ------- |
 ''');
 
@@ -34,7 +34,7 @@ Future createReadMe() async {
     final publikes =
         '<img alt="Pub Likes" src="https://img.shields.io/pub/likes/${repo.name}?style=$badgeStyle">';
     final popularity =
-        '<img alt="Pub Popularity" src="https://img.shields.io/pub/popularity/${repo.name}?style=$badgeStyle">';
+        '<img alt="Pub Popularity" src="https://img.shields.io/pub/dm/${repo.name}?style=$badgeStyle">';
     final ownerIcon =
         '<img alt="${repo.owner.login}" src="${repo.owner.avatar_url}" width="24" height="24" style="border-radius:50%">';
     final version =
