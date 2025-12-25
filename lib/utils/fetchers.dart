@@ -13,7 +13,7 @@ final handPickedRepoNames = {
   RepoInfo(name: 'aad_oauth', owner: 'Earlybyte', ownerType: RepoOwnerType.organization),
   RepoInfo(name: 'fhir_questionnaire', owner: 'luis901101', ownerType: RepoOwnerType.user),
   RepoInfo(name: 'stormberry', owner: 'schultek', ownerType: RepoOwnerType.user),
-  RepoInfo(name: 'jaspr', owner: 'schultek', ownerType: RepoOwnerType.user),
+  // RepoInfo(name: 'jaspr', owner: 'schultek', ownerType: RepoOwnerType.user), // only documentation fix
   RepoInfo(name: 'android_long_task', owner: 'easazade', ownerType: RepoOwnerType.user),
   RepoInfo(name: 'faker_x', owner: 'easazade', ownerType: RepoOwnerType.user),
   RepoInfo(name: 'font_preview', owner: 'easazade', ownerType: RepoOwnerType.user),
@@ -33,6 +33,7 @@ Future<List<GithubRepository>> fetchFeaturedRepos({bool offlineMode = false}) as
     for (var json in jsonList) {
       featuredRepos.add(GithubRepository.fromJson(json));
     }
+    featuredRepos.removeWhere((repo) => !handPickedRepoNames.map((e) => e.name).contains(repo.name));
   } else {
     for (var info in handPickedRepoNames) {
       await Future.delayed(const Duration(seconds: 5));
