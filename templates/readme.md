@@ -37,11 +37,11 @@
     src="https://img.shields.io/badge/LC-FFA116?style=for-the-badge&logo=leetcode&logoColor=white&logoWidth=16"
   /></a> -->
   <span>&nbsp;</span>
-  <a href="https://www.instagram.com/alireza.coder" target="_blank"><img
+  <!-- <a href="https://www.instagram.com/alireza.coder" target="_blank"><img
     alt="instagram"
     height="22px"
     src="https://img.shields.io/badge/IG-d83262?style=for-the-badge&logo=instagram&logoColor=white&logoWidth=16"
-  /></a>
+  /></a> -->
   <span>&nbsp;</span>
   <a href="https://twitter.com/easazade" target="_blank"><img
     alt="twitter"
@@ -55,11 +55,11 @@
     src="https://img.shields.io/badge/YT-ec3323?style=for-the-badge&logo=youtube&logoColor=white&logoWidth=16"
   /></a>
   <span>&nbsp;</span>
-  <a href="https://t.me/easazade" target="_blank"><img
+  <!-- <a href="https://t.me/easazade" target="_blank"><img
     alt="telegram"
     height="22px"
     src="https://img.shields.io/badge/TG-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"
-  /></a>
+  /></a> -->
   <!-- <span>&nbsp;</span>
   <a href="https://discord.easazade.me"><img
     alt="discord"
